@@ -55,6 +55,7 @@ clientes AS(
 SELECT
     VE.venda_id,
     VE.valor_venda,
+    CAST(TO_VARCHAR(CAST(VE.data_venda AS DATE), 'YYYYMMDD') AS INTEGER) AS data_venda_key,
     VE.data_venda,
     VE.data_inclusao,
     VE.data_atualizacao,
